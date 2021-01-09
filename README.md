@@ -9,7 +9,7 @@ Topics include object-oriented concepts, lambda expressions, functional interfac
 * programming with types and packages
 * generics and annotations
 
-#### Interface, Nested Classes, Functional Concepts - 20%
+#### Interface, Nested Classes, Functional Concepts
 * working with interface
 * static nested classes
 * inner classes 
