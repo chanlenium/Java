@@ -11,6 +11,6 @@
 >* Match the type of value to be same as print format `%d` (*int*).
 
 ## Screenshot
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/week01_Android%20Introduction/DemoScreenShot.png" width="600" height="300" />
+<img src="https://github.com/chanlenium/Java/blob/main/01_Introduction%20to%20Java/workshop01_screenshot.png" width="600" height="300" />
 
 
