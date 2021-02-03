@@ -1,6 +1,6 @@
 # Workshop01 : Basic control structure (*nested for-loops*)
 
-## Object
+## Objective
 >* Print pyramid structure without any hard coding and arrays
 >* Using indentation and alignment for pretty formatting
 
