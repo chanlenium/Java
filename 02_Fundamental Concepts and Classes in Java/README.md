@@ -1,4 +1,4 @@
-# Workshop02 : Class object creation/initialization and Palindrome algorithim implementation
+# Workshop02 : Palindrome algorithim implementation
 
 ## Objective
 * Familiar with creating and initializing Class object
