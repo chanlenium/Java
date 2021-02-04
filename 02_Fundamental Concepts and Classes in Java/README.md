@@ -45,4 +45,4 @@ do{
 * Print the proper message based on if the input is palindrome or not
 
 ## Screenshot
-<img src="https://github.com/chanlenium/Java/blob/main/01_Introduction%20to%20Java/workshop01_screenshot.png" width="600" height="300" />
+<img src="https://github.com/chanlenium/Java/blob/main/02_Fundamental%20Concepts%20and%20Classes%20in%20Java/screenshot.png" width="600" height="400" />
