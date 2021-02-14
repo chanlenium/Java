@@ -1,6 +1,6 @@
 # Workshop 03 & 04 : Encapsulation and Abstraction, Inheritance, Polymorphism, and Exceptions.
 
-## Objective
+## Objectives
 * Familiar with implementing Inheritance, Polymorphism, Abstraction(Interface)
 * Read text file using `BufferedReader`
 * Implement custome `Exception`
@@ -8,42 +8,105 @@
 * Cutomize display *number formmating*
 
 ## Outline
-* When the user enters input value, the program validates input as follows.
+### Read a text file
+* To read a text file, create an object of BufferedReader class 
 ```
-Scanner sc = new Scanner(System.in);    // Create Scanner object
-sc.useDelimiter("\n");  // Set input delimiter as "new line(\n)"
+BufferedReader br = new BufferedReader(new FileReader("shapes.txt"));
+```
+* If the file is not found, it is treated using `FileNotFoundException`
+* Read each line till the end of file, and validate input(each line) and call exception when the input meets exception handling condition
+```
+try {
+    br = new BufferedReader(new FileReader("shapes.txt"));
+    while ((line = br.readLine()) != null) {      // continue to read till the end of line
+        String[] tokens = line.split(",");  // Split string to words using delimiter(,)
+        // Validate input and call exception when the input meets exception handling condition
+        try {
+            // Call the method validate in InputManager class by passing "tokens"
+            // If the input (i.e., tokens) satisfies input requirements, it returns true, otherwise false
+            if ((InputManager.validate(tokens, false))) {
+                // Insert a valid input "token" array to storedShapes array as a new row
+                // In this assignment, we store all valid Shape inputs by inserting valid input to storedShapes array
+                // In turns, we use only one 2-D array!
+                storedShapes = Utils.InsertRow(storedShapes, tokens);
+            }
+        } catch (WrongValueException exceptionMsg) {
+            // catch the customized exception message and print it
+            System.out.println(exceptionMsg.getMessage());
+        }
+    }
+} catch (FileNotFoundException e) {
+    e.printStackTrace();
+}
+```
+* Insert valid line to the end of 2D array
+```
+public static String[][] InsertRow(String[][] storedShapes, String[] tokens) {
+    String[][] result = new String[storedShapes.length+1][];
+    for(int i = 0; i < storedShapes.length; i++){
+        result[i] = storedShapes[i];
+    }
+    result[storedShapes.length] = tokens;
+    return result;
+}
+```
 
-boolean keepTypingInput = true;   // variable to indicate user needs to type input again
-do{
-    System.out.print("Please enter a word : ");
-    // If user's input does not meet regex pattern, user should type input again
-    // until the user's input satisfies regex pattern.
-    while (!sc.hasNext("[A-Za-z]*")) {
-        System.out.print("Please enter a valid value : ");
-        sc.next(); // Finds and returns the next complete token from this scanner.
+### Custom Exception handling
+* When the input does not meet input requirement (e.g., all input values are positive), the program throws exception
+```
+if(Utils.isAllPositive(slice))
+    isValid = true;
+else
+    throw new WrongValueException("Invalid side(s)!");
+```
+    * Customize exception handler
+```
+public class WrongValueException extends Exception{
+    public WrongValueException(String message) {
+        super(message);
     }
-    // When user's input meets regex pattern, variable "userInput" is set to user's input
-    keepTypingInput = false;
-    setUserInput(sc.next());
-}while(keepTypingInput);
-System.out.println("You entered a word : " + getUserInput()); // Print valid user input
+}
 ```
-* When the user input is validated, the program create stack object and initialize it with 1 argument which is the length of user input
-* The program pushes user input to a stack array as follows.
+
+### Polymorphism
+* In this workshop, I create various shapes object having common goal(i.e, calculating perimeter)
+    * Circle, Rectangular, Parallelogram, Square, Triagle
+* First, implement the interface `Shape` having *abstract* method `perimeter()`
 ```
-for(int i = 0 ; i < palindrome.getUserInput().length(); i++)
-    stack.push(palindrome.getUserInput().charAt(i));
+@FunctionalInterface
+public interface Shape {
+    double perimeter();
+}
 ```
-* The program checks the user input String(Word) is palindrome or not
+* For each shape classe, override the abstract perimeter method
+    * Example: Circle class
 ```
-do{
-    for(iter = 0 ; iter < palindrome.getUserInput().length(); iter++){
-        if(palindrome.getUserInput().charAt(iter) != stack.pop())
-            isPalindrome = false;
+@Override
+public double perimeter() {
+    return (2 * Math.PI * getRadius());
+}
+```
+* Because `Square` and `Parallelogram` is subset of `Rectangular`, these classes do not override `perimeter()` method
+
+### Inheritance
+* Because `Square` and `Parallelogram` is subset of `Rectangular`, these classes inherit the `Rectangular` class
+```
+public class Square extends Rectangle{
+    public Square(double side) {
+        super(side, side);
     }
-}while (isPalindrome && iter < palindrome.getUserInput().length());
+
+    @Override
+    public String toString() {
+        NumberFormat df = Utils.displayFormat(perimeter());
+        return this.getClass().getSimpleName() +
+                " {s=" + getHeight() +
+                "} perimeter = " + df.format(perimeter());
+    }
+}
 ```
-* Print the proper message based on if the input is palindrome or not
+* When executing the no-argument constructor of subClass, the no-argument constructor of superClass(i.e., 'Rectangular` class) is automatically called
+    * So, there should be no-argument constructor in the `Rectangular` class
 
 ## Screenshot
 <img src="https://github.com/chanlenium/Java/blob/main/02_Fundamental%20Concepts%20and%20Classes%20in%20Java/screenshot.png" width="600" height="400" />
