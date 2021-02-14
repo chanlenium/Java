@@ -1,10 +1,11 @@
-# Workshop02 : Palindrome algorithim implementation
+# Workshop 03 & 04 : Encapsulation and Abstraction, Inheritance, Polymorphism, and Exceptions.
 
 ## Objective
-* Familiar with creating and initializing Class object
-* Develop a *Stack* class using *character array* 
-* Input value into the program using *Scanner* class and validate the input
-* Implement *palindrome* algorithm
+* Familiar with implementing Inheritance, Polymorphism, Abstraction(Interface)
+* Read text file using `BufferedReader`
+* Implement custome `Exception`
+* Creating and treating *2-D array*
+* Cutomize display *number formmating*
 
 ## Outline
 * When the user enters input value, the program validates input as follows.
