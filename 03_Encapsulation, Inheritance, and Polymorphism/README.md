@@ -109,4 +109,4 @@ public class Square extends Rectangle{
     * So, there should be no-argument constructor in the `Rectangular` class
 
 ## Screenshot
-<img src="https://github.com/chanlenium/Java/blob/main/02_Fundamental%20Concepts%20and%20Classes%20in%20Java/screenshot.png" width="600" height="400" />
+* Link : https://github.com/chanlenium/Java/blob/main/03_Encapsulation%2C%20Inheritance%2C%20and%20Polymorphism/screenshot.pdf
