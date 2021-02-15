@@ -110,3 +110,16 @@ public class Square extends Rectangle{
 
 ## Screenshot
 * Link : https://github.com/chanlenium/Java/blob/main/03_Encapsulation%2C%20Inheritance%2C%20and%20Polymorphism/screenshot.pdf
+
+## Important points about Inheritance and Polymorphism
+* If you have at least one abstract method in your class, your class should be declared as "abstract". You can't create any objects based off an abstract class (since you have no implementations for at least one of its methods!) It's also possible that you declare a class as "abstract" even if you don't have any abstract methods in that class! The reason is simple; you want to use that class somewhere in an inheritance hierarchy (as a super-class) and so, be able to use polymorphism in your code.
+
+* In an interface, all the methods are, by default, public abstract (and all the fields are by default public static final.) Classes that "implements" that interface should implement all those abstract methods or else, must be declared as "abstract".
+
+* In Java, classes could "extends" just one super-class but could "implements" as many as interfaces as possible. Regardless, that class is considered to be a sub-class of that super-class and all those interfaces.
+
+* "final" as a keyword, could be used for a variable (so that variable's value can't be changed later on), could be used for a method (which means that method can't be overridden in the sub-classes of this class), or could be used for a class (which means that class can't be extended or be used as a super-class in an inheritance hierarchy.)
+
+* One famous interview Q would be the difference between abstract and final classes. The answer is you can't create an object based off an abstract class; it's just there to be inherited. On the other hand, you can't extend a "final" class but could create objects based off that.
+
+* Another interview Q would be the difference between abstract classes and interfaces. One preliminary answer would be in an abstract class, there is this possibility that we have no abstract methods but in an interface, "all" the methods are abstract.
