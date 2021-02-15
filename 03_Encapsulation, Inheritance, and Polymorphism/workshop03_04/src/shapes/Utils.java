@@ -49,4 +49,15 @@ public class Utils {
         result[storedShapes.length] = tokens;
         return result;
     }
+
+    public static String[][] deleteRow(String[][] storedShapes, int deleteRowIndex) {
+        String[][] result = new String[storedShapes.length-1][];
+        for(int i = 0; i < deleteRowIndex; i++){
+            result[i] = storedShapes[i];
+        }
+        for(int i = deleteRowIndex + 1; i < storedShapes.length; i++){
+            result[i - 1] = storedShapes[i];
+        }
+        return result;
+    }
 }

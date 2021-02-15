@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -86,6 +87,8 @@ public class Main {
                                 String.format(Utils.displayFormat(shape.perimeter()).format(shape.perimeter()))
                         )){
                             System.out.printf("%s\n\n", shape.toString());
+                        }else{
+                            storedShapes = Utils.deleteRow(storedShapes, i--);
                         }
                         break;
                     case "Square":
@@ -111,6 +114,8 @@ public class Main {
                             System.out.printf("%s\n\n", shape.toString());
                             // calculate total perimeter for the current Class type
                             ((Triangle)shape).setTotalPerimeterOfTriangles(((Triangle)shape).getTotalPerimeterOfTriangles() + shape.perimeter());
+                        }else{
+                            storedShapes = Utils.deleteRow(storedShapes, i--);
                         }
                         break;
                     default:
@@ -121,6 +126,7 @@ public class Main {
             System.out.println("No more valid input");
         }
 
+        //System.out.println(Arrays.deepToString(storedShapes));
         printHeaderTask3();
         {
             Shape[] shapes = new Shape[2];;
