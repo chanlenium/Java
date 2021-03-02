@@ -63,4 +63,4 @@ fis.close();
 ```
 
 ## Screenshot
-* Link : https://github.com/chanlenium/Java/blob/main/03_Encapsulation%2C%20Inheritance%2C%20and%20Polymorphism/screenshot.pdf
+* Link : https://github.com/chanlenium/Java/blob/main/05_IO%20Streams%2C%20File%20IO%2C%20and%20Serialization/workshop05/ScreenshotWorkshop05.pdf
