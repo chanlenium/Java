@@ -11,7 +11,7 @@
     * src (right click) > New > Swing UI Designer > GUI Form 
     * Create GUI form (GUIuserInfo.form) as well as GUI manager class (GUIuserInfo.class)
 
-image
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/03_Android%20more%20UI%20elements/Lab2/Screenshots.png" width="600" height="350" />
 
 * Frame definition
 ```
@@ -132,4 +132,4 @@ deserializeButton.addActionListener(new ActionListener() {
 ```
 
 ## Screenshot
-* Link : https://github.com/chanlenium/Java/blob/main/06_Inner%20Classes%20and%20Anonymous%20Classes%20in%20Java%2C%20Event%20Driven%20Programming%20using%20Swing%2C%20and%20JavaFX/workshop06/ScreenshotWorkshop06.JPG
+<img src="https://github.com/chanlenium/Java/blob/main/06_Inner%20Classes%20and%20Anonymous%20Classes%20in%20Java%2C%20Event%20Driven%20Programming%20using%20Swing%2C%20and%20JavaFX/workshop06/ScreenshotWorkshop06.JPG">
