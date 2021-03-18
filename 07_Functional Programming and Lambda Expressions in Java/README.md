@@ -41,4 +41,4 @@ public class Circle implements Shape{
 ```
 
 ## Screenshot
-* Link : https://github.com/chanlenium/Java/blob/main/03_Encapsulation%2C%20Inheritance%2C%20and%20Polymorphism/screenshot.pdf
+* Link : https://github.com/chanlenium/Java/blob/main/07_Functional%20Programming%20and%20Lambda%20Expressions%20in%20Java/workshop07/screenshot.pdf
