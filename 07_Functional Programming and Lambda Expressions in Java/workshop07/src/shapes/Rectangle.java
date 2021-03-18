@@ -4,9 +4,10 @@ import java.text.NumberFormat;
 
 public class Rectangle implements Shape{
     private double width, height;
-    // create an object and functional interface using lambda expression
+    // create an object of functional interface using lambda expression
     // define "getArea(double x, double y)" method in Area interface
     // as "width * height"
+    // area : reference to objects
     private Area area = (width, height) -> width * height;
 
     public Rectangle() {

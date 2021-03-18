@@ -4,9 +4,10 @@ import java.text.NumberFormat;
 
 public class Circle implements Shape{
     private double radius;
-    // create an object and functional interface using lambda expression
+    // create an object of functional interface using lambda expression
     // define "getArea(double x, double y)" method in Area interface
-    // as "Math.PI * realRadius * fakeRadius"
+    // as "Math.PI * realRadius * realRadius"
+    // area : reference to objects
     private Area area = (realRadius, fakeRadius) -> Math.PI * realRadius * realRadius;
 
     public Circle() {
