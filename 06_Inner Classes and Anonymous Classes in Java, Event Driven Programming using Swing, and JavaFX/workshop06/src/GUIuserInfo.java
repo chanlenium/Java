@@ -52,6 +52,7 @@ public class GUIuserInfo extends JFrame{
             }
         });
 
+        // When clicking 'Deserialize' button
         deserializeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -26,7 +26,5 @@ public class Start {
                 frame.setLocationRelativeTo(null);
             }
         });
-
-
     }
 }
