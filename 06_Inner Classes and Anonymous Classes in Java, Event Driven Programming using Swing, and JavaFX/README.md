@@ -132,4 +132,4 @@ deserializeButton.addActionListener(new ActionListener() {
 ```
 
 ## Screenshot
-* Link : https://github.com/chanlenium/Java/blob/main/03_Encapsulation%2C%20Inheritance%2C%20and%20Polymorphism/screenshot.pdf
+* Link : https://github.com/chanlenium/Java/blob/main/06_Inner%20Classes%20and%20Anonymous%20Classes%20in%20Java%2C%20Event%20Driven%20Programming%20using%20Swing%2C%20and%20JavaFX/workshop06/ScreenshotWorkshop06.JPG
