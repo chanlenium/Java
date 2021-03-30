@@ -8,7 +8,7 @@ public class Rectangle implements Shape{
     // define "getArea(double x, double y)" method in Area interface
     // as "width * height"
     // area : reference to objects
-    private Area area = (width, height) -> width * height;
+    private Area<Double, Double> area = (width, height) -> width * height;
 
     public Rectangle() {
         // no-argument constructor
@@ -45,7 +45,7 @@ public class Rectangle implements Shape{
     }
 
     public double rectangleArea(double width, double height, Area rArea){
-        return rArea.getArea(width, height);    // call getArea method to calculate rectangular area
+        return (double) rArea.getArea(width, height);    // call getArea method to calculate rectangular area
     }
 
     @Override

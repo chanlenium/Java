@@ -8,7 +8,7 @@ public class Circle implements Shape{
     // define "getArea(double x, double y)" method in Area interface
     // as "Math.PI * realRadius * realRadius"
     // area : reference to objects
-    private Area area = (realRadius, fakeRadius) -> Math.PI * realRadius * realRadius;
+    private Area<Double, Double> area = (realRadius, fakeRadius) -> Math.PI * realRadius * realRadius;
 
     public Circle() {
     }
@@ -31,7 +31,7 @@ public class Circle implements Shape{
     }
 
     public double circleArea(double radius, Area cArea){
-        return cArea.getArea(radius, radius);   // call getArea method to calculate circle area
+        return (double) cArea.getArea(radius, radius);   // call getArea method to calculate circle area
     }
 
     @Override
